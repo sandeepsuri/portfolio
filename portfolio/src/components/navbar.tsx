@@ -1,6 +1,15 @@
 "use client"
 import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { 
+    FaBars, 
+    FaTimes,
+    FaGithub,
+    FaLinkedin,
+    FaLink,
+    FaGit
+} from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
@@ -34,6 +43,42 @@ export const Navbar = () => {
                 <li className='py-6 text-4xl'>Contact</li>
             </ul>
             {/* Social Icons */}
+            <div className='hidden lg:flex fixed flex-col justify-center items-center bottom-0 left-0 w-full' >
+                <ul className='flex'>
+                    <div className='w-[160px] h-[70px]'>
+                        <li className='rounded-tl-lg flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#0077B5]'>
+                            <a className='flex flex-col justify-between items-center w-full text-gray-300' href='/'>
+                                <FaLinkedin size={30} />
+                                LinkedIn
+                            </a>
+                        </li>
+                    </div>
+                    <div className='w-[160px] h-[70px]'>
+                        <li className='flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#171515]'>
+                            <a className='flex flex-col justify-between items-center w-full text-gray-300' href='/'>
+                                <FaGithub size={30} />
+                                Github
+                            </a>
+                        </li>
+                    </div>
+                    <div className='w-[160px] h-[70px]'>
+                        <li className='flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#F4B400]'>
+                            <a className='flex flex-col justify-between items-center w-full text-gray-300 text-black' href='/'>
+                                <HiOutlineMail size={30} color='black' />
+                                Email
+                            </a>
+                        </li>
+                    </div>
+                    <div className='w-[160px] h-[70px]'>
+                        <li className='rounded-tr-lg flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#D6D2C7]'>
+                            <a className='flex flex-col justify-between items-center w-full text-gray-300 text-black' href='/'>
+                                <BsFillPersonLinesFill size={30} color='black' />
+                                Resume
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </div>
     )
 }

@@ -1,10 +1,11 @@
 import { Navbar } from '@/components/navbar'
-import Image from 'next/image'
+import { Home } from '@/components/home'
 
-export default function Home() {
+export default function Main() {
   return (
     <div>
       <Navbar />
+      <Home />
       <h1 className='text-2xl font-bold'>Hello World</h1>
     </div>
   )
