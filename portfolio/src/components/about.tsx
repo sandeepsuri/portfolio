@@ -1,11 +1,9 @@
 "use client"
 import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { HiArrowNarrowRight } from 'react-icons/hi'
 
 export const About = () => {
     return (
-        <div name='about' className='w-full h-screen text-gray-300 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
+        <div name='about' className='w-full h-screen text-gray-300 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
             <div className='flex flex-col justify-center items-center w-full h-full'>
                 <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
                     <div className="sm:text-right pb-8 pl-4">

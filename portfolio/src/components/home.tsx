@@ -5,7 +5,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 
 export const Home = () => {
     return (
-        <div name='home' className='w-full h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
+        <div name='home' className='w-full h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
             <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
                 <h1 className='text-4xl sm:text-7xl font-bold text-gray-300 py-4'>Welcome to my site!</h1>
                 <p className='text-gray-400'>Hey, my name is Sandeep Suri and I'm a</p>
