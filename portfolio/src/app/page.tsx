@@ -6,7 +6,6 @@ export default function Main() {
     <div>
       <Navbar />
       <Home />
-      <h1 className='text-2xl font-bold'>Hello World</h1>
     </div>
   )
 }

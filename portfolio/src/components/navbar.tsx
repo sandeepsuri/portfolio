@@ -10,15 +10,17 @@ import {
 } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import Profile from '../assets/profile.png'
+import Image from 'next/image'
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
     const hamburgerClick = () => setNavbar(!navbar)
 
     return(
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-            <div>
-                Logo
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 border-b-4'>
+            <div className='hidden md:flex ml-[-20px]'>
+                <Image className='rounded-b-3xl ring-2 ring-gray-300 dark:ring-gray-500' src={Profile} alt='Profile Image' style={{ width: '100px',}} />
             </div>
 
             {/* Nav Menu - Desktop */}
