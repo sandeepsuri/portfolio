@@ -1,7 +1,7 @@
 "use client"
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Link } from 'react-scroll'
 
 export const Home = () => {
     return (
@@ -17,12 +17,14 @@ export const Home = () => {
                 </p>
 
                 <div>
-                    <button className='text-white group border-2 rounded-lg px-6 py-3 my-2 flex items-center justify-center hover:bg-[#42546f] hover:border-[#42546f] duration-300'>
-                        View Work
-                        <span className='group-hover:rotate-90 group-hover:mt-[-10px] duration-300 inline-flex items-center'>
-                        <HiArrowNarrowRight className='ml-2 transform origin-center'/>
-                        </span>
-                    </button>
+                    <Link to='about' smooth={true} duration={300}>
+                        <button className='text-white group border-2 rounded-lg px-6 py-3 my-2 flex items-center justify-center hover:bg-[#42546f] hover:border-[#42546f] duration-300'>
+                            View Work
+                            <span className='group-hover:rotate-90 group-hover:mt-[-10px] duration-300 inline-flex items-center'>
+                            <HiArrowNarrowRight className='ml-2 transform origin-center'/>
+                            </span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

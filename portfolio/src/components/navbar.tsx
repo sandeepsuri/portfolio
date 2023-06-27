@@ -1,5 +1,10 @@
 "use client"
 import React, { useState } from 'react'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsFillPersonLinesFill } from 'react-icons/bs'
+import Profile from '../assets/profile.png'
+import Image from 'next/image'
+import { Link } from 'react-scroll'
 import { 
     FaBars, 
     FaTimes,
@@ -8,10 +13,6 @@ import {
     FaLink,
     FaGit
 } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Profile from '../assets/profile.png'
-import Image from 'next/image'
 
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
@@ -25,11 +26,21 @@ export const Navbar = () => {
 
             {/* Nav Menu - Desktop */}
             <ul className='hidden md:flex'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills & Experience</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li>
+                    <Link to='home' smooth={true} duration={300}>Home</Link>
+                </li>
+                <li>
+                    <Link to='about' smooth={true} duration={300}>About</Link>
+                </li>
+                <li>
+                    <Link to='skills' smooth={true} duration={300}>Skills & Experience</Link>
+                </li>
+                <li>
+                    <Link to='project' smooth={true} duration={300}>Projects</Link>
+                </li>
+                <li>
+                    <Link to='contact' smooth={true} duration={300}>Contact</Link>
+                </li>
             </ul>
 
             {/* Nav Menu - Hamburger, Hide for now*/}
