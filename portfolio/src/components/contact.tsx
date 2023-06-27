@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 import React, { useState } from 'react'
 
@@ -39,7 +40,7 @@ export const Contact = () => {
     }
 
     return (
-        <div name="contact" className='w-full h-screen flex justify-center items-center p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black' >
+        <div id="contact" className='w-full h-screen flex justify-center items-center p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black' >
             <form onSubmit={handleSubmit} className='flex flex-col max-w-[600px] w-full'>
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 text-gray-300'>Contact</p>
@@ -47,7 +48,7 @@ export const Contact = () => {
                 </div>
                 <input className='p-2 bg-[#bac4e5]' type='text' placeholder='Full Name' id='name' required />
                 <input className='my-4 p-2 bg-[#bac4e5]' type='email' placeholder='Email' id='email' required />
-                <textarea className='bg-[#bac4e5]' id="message" rows='10' placeholder='Write Your Message Here!' maxLength={400} required ></textarea>
+                <textarea className='bg-[#bac4e5]' id="message" rows={10} placeholder='Write Your Message Here!' maxLength={400} required ></textarea>
 
                 {isLoading ? (
 

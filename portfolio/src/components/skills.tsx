@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image'
@@ -13,7 +14,7 @@ import Tailwind from '../assets/tailwind-css.png'
 
 export const Skills = () => {
     return (
-        <div name='skills' className='w-full h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black text-gray-300'>
+        <div id='skills' className='w-full h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black text-gray-300'>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <div>
                     <p className='text-4xl font-bold inline border-b-4'>My Full-Stack Experience</p>
