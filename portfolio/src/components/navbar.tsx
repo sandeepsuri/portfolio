@@ -49,11 +49,21 @@ export const Navbar = () => {
             </div>
             {/* Nav Menu - Mobile, Hide for now*/}
             <ul className={!navbar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'} >
-                <li className='py-6 text-4xl'>Home</li>
-                <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Skills and Experience</li>
-                <li className='py-6 text-4xl'>Projects</li>
-                <li className='py-6 text-4xl'>Contact</li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={hamburgerClick} to='home' smooth={true} duration={300}>Home</Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={hamburgerClick} to='about' smooth={true} duration={300}>About</Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={hamburgerClick} to='skills' smooth={true} duration={300}>Skills & Experience</Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={hamburgerClick} to='project' smooth={true} duration={300}>Projects</Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link onClick={hamburgerClick} to='contact' smooth={true} duration={300}>Contact</Link>
+                </li>
             </ul>
             {/* Social Icons */}
             <div className='hidden lg:flex fixed flex-col justify-center items-center bottom-0 left-0 w-full' >
