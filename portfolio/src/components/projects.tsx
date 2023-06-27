@@ -59,7 +59,7 @@ export const Projects = () => {
                     className='shadow-lg shadow-[#67696b] bg-white group container rounded-md flex justify-center items-center mx-auto content-div'>
                         <div className='opacity-0 group-hover:opacity-100'>
                             <span className='text-2xl font-bold text-white tracking-wider'>
-                                Python Web Scraper
+                                Block Breacker using Unity 3D
                             </span>
                             <div className='pt-8 text-center'>
                                 <a href='/'>

@@ -65,7 +65,7 @@ export const Navbar = () => {
                     </div>
                     <div className='w-[160px] h-[70px]'>
                         <li className='flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#F4B400]'>
-                            <a className='flex flex-col justify-between items-center w-full text-gray-300 text-black' href='/'>
+                            <a className='flex flex-col justify-between items-center w-full text-black' href='/'>
                                 <HiOutlineMail size={30} color='black' />
                                 Email
                             </a>
@@ -73,9 +73,9 @@ export const Navbar = () => {
                     </div>
                     <div className='w-[160px] h-[70px]'>
                         <li className='rounded-tr-lg flex justify-center items-center mt-10 hover:mt-[20px] duration-300 bg-[#D6D2C7]'>
-                            <a className='flex flex-col justify-between items-center w-full text-gray-300 text-black' href='/'>
+                            <a className='flex flex-col justify-between items-center w-full text-black' href='/'>
                                 <BsFillPersonLinesFill size={30} color='black' />
-                                Resume
+                                Resumé
                             </a>
                         </li>
                     </div>
