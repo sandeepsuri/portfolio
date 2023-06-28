@@ -15,8 +15,20 @@ export default async function ContactAPI(req, res) {
         }
     })
 
+    await new Promise((resolve, reject) => {
+        transport.verify(function (error, success) {
+            if(error) {
+                console.log(error)
+                reject(error)
+            }
+            else {
+                resolve(success)
+            }
+        })
+    })
+
     try {
-        const mail = await transport.sendMail({
+        const mailData = {
             from: email,
             to: user,
             replyTo: email,
@@ -26,8 +38,14 @@ export default async function ContactAPI(req, res) {
                 <p>Email: ${email}</p>
                 <p>Message: ${message}</p>
             `
+        }
+
+        await new Promise((resolve, reject) => {
+            transport.sendMail(mailData, (err, info) => {
+                if(err) reject(err)
+                else resolve(info)
+            })
         })
-        console.log("Message sent: ", mail.messageId)
         return res.status(200).json({ message: "success" })
     } 
     catch (e){
