@@ -14,29 +14,39 @@ import {
     FaGit
 } from 'react-icons/fa'
 
+import { 
+    BiDetail,
+    BiHomeAlt, 
+    BiUser
+} from 'react-icons/bi'
+
+import { GiGamepadCross } from 'react-icons/gi'
+import { HiOutlineMailOpen } from 'react-icons/hi'
+
 export const Navbar = () => {
     const [navbar, setNavbar] = useState(false)
     const hamburgerClick = () => setNavbar(!navbar)
 
     return(
         <div className="flex justify-center">
-            <div className='fixed w-max[400px] h-[80px] flex justify-between items-center px-4 my-10 bg-[#0a192f] text-gray-300 border-b-4'>
+            <button className='fixed w-max[400px] h-[80px] flex justify-between items-center px-4 my-10 bg-[#0a192f] text-gray-300 rounded-full' data-te-ripple-init data-te-ripple-color="light">
                 {/* Nav Menu - Desktop */}
                 <ul className='hidden md:flex items-center flex-grow justify-center'>
+                    <li className=''>
+                        <Link to='home' smooth={true} duration={300}><BiHomeAlt size={30} /></Link>
+                    </li>
+
                     <li>
-                        <Link to='home' smooth={true} duration={300}>Home</Link>
+                        <Link to='about' smooth={true} duration={300}><BiUser size={30} /></Link>
                     </li>
                     <li>
-                        <Link to='about' smooth={true} duration={300}>About</Link>
+                        <Link to='skills' smooth={true} duration={300}><BiDetail size={30} /></Link>
                     </li>
                     <li>
-                        <Link to='skills' smooth={true} duration={300}>Skills & Experience</Link>
+                        <Link to='project' smooth={true} duration={300}><GiGamepadCross size={30} /></Link>
                     </li>
                     <li>
-                        <Link to='project' smooth={true} duration={300}>Projects</Link>
-                    </li>
-                    <li>
-                        <Link to='contact' smooth={true} duration={300}>Contact</Link>
+                        <Link to='contact' smooth={true} duration={300}><HiOutlineMailOpen size={30} /></Link>
                     </li>
                 </ul>
 
@@ -99,7 +109,7 @@ export const Navbar = () => {
                         </div>
                     </ul>
                 </div>
-            </div>
+            </button>
         </div>
     )
 }
