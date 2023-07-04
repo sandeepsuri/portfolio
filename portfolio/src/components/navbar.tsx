@@ -31,12 +31,16 @@ export const Navbar = () => {
     const [menuClick, setMenuClick] = useState(false)
     const [logoCycle, setLogoCycle] = useState(0)
     const logos = [PSLogo, XboxLogo, NintendoLogo]
+    const logoColour = ['#0172D0', '#2ca243', '#dd2020']
+    const [logoColourCycle, setLogoColourCycle] = useState(logoColour[0])
+    const currentLogo = logoCycle % logos.length
 
     const toggleMenu = () => {
         setMenuClick(!menuClick)
         if(!menuClick) {
             const nextLogo = (logoCycle + 1) % logos.length
             setLogoCycle(nextLogo)
+            setLogoColourCycle(logoColour[currentLogo])
         }
     }
 
@@ -45,13 +49,18 @@ export const Navbar = () => {
 
     return(
         <div className="flex justify-center">
-            {/* <div className='fixed w-max[400px] h-[80px] flex justify-between items-center px-4 my-10 bg-[#0a192f] text-gray-300 rounded-full' data-te-ripple-init data-te-ripple-color="light"> */}
             <div className={`fixed flex justify-between items-center px-4 my-10 transition-all duration-500 
                 ${ menuClick ? 'w-[400px] h-[80px]' : 'w-[80px] h-[80px]' }
-                bg-[#0a192f] text-gray-300 rounded-full cursor-pointer`}
+                text-gray-300 rounded-full cursor-pointer`}
                 onClick={toggleMenu}
                 style={{
-                    ...(menuClick ? {} : { backgroundImage: `url(${logos[logoCycle].src})`, backgroundSize: 'cover'})
+                    ...(menuClick ? {} : { 
+                        backgroundImage: `url(${logos[logoCycle].src})`, 
+                        backgroundSize: 'contain', 
+                        backgroundRepeat: 'no-repeat',
+                        backgroundColor: logoColourCycle
+                    }),
+                    backgroundColor: logoColourCycle
                 }}
             >
                 {/* Nav Menu - Desktop */}
