@@ -49,20 +49,22 @@ export const Navbar = () => {
 
     return(
         <div className="flex justify-center">
-            <div className={`fixed flex justify-between items-center px-4 my-10 transition-all duration-500 
-                ${ menuClick ? 'w-[400px] h-[80px]' : 'w-[80px] h-[80px]' }
-                text-gray-300 rounded-full cursor-pointer`}
-                onClick={toggleMenu}
-                style={{
-                    ...(menuClick ? {} : { 
-                        backgroundImage: `url(${logos[logoCycle].src})`, 
-                        backgroundSize: 'contain', 
-                        backgroundRepeat: 'no-repeat',
+            <div className={`w-full fixed flex justify-center items-center px-4 transition-all duration-500`} >
+
+                <div className={`hidden md:flex md:justify-between md:items-center md:px-4 md:my-10 transition-all duration-500
+                    ${ menuClick ? 'w-[400px] h-[80px]' : 'w-[80px] h-[80px]' }
+                    text-gray-300 rounded-full cursor-pointer`}
+                    onClick={toggleMenu}
+                    style={{
+                        ...(menuClick ? {} : { 
+                            backgroundImage: `url(${logos[logoCycle].src})`, 
+                            backgroundSize: 'contain', 
+                            backgroundRepeat: 'no-repeat',
+                            backgroundColor: logoColourCycle,
+                        }),
                         backgroundColor: logoColourCycle
-                    }),
-                    backgroundColor: logoColourCycle
-                }}
-            >
+                    }}
+                >
                 {/* Nav Menu - Desktop */}
                 {menuClick ? (
                 <ul className='hidden md:flex items-center flex-grow justify-center'>
@@ -83,13 +85,14 @@ export const Navbar = () => {
                     </li>
                 </ul>
                 ) : null}
+                </div>
 
-                {/* Nav Menu - Hamburger, Hide for now*/}
-                <div onClick={hamburgerClick} className='md:hidden z-10'>
+                {/* Nav Menu - Hamburger */}
+                <div onClick={hamburgerClick} className='md:hidden z-10 my-10'>
                     {!navbar ? <FaBars /> : <FaTimes />}
                 </div>
-                {/* Nav Menu - Mobile, Hide for now*/}
-                <ul className={!navbar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'} >
+                {/* Nav Menu - Mobile */}
+                <ul className={!navbar ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center text-gray-300'} >
                     <li className='py-6 text-4xl'>
                         <Link onClick={hamburgerClick} to='home' smooth={true} duration={300}>Home</Link>
                     </li>
@@ -147,27 +150,3 @@ export const Navbar = () => {
         </div>
     )
 }
-
-    <div className="flex justify-center">
-            <div className='fixed w-max[400px] h-[80px] flex justify-between items-center px-4 my-10 bg-[#0a192f] text-gray-300 rounded-full' data-te-ripple-init data-te-ripple-color="light">
-                {/* Nav Menu - Desktop */}
-                <ul className='hidden md:flex items-center flex-grow justify-center'>
-                    <li className=''>
-                        <Link to='home' smooth={true} duration={300}><BiHomeAlt size={30} /></Link>
-                    </li>
-
-                    <li>
-                        <Link to='about' smooth={true} duration={300}><BiUser size={30} /></Link>
-                    </li>
-                    <li>
-                        <Link to='skills' smooth={true} duration={300}><BiDetail size={30} /></Link>
-                    </li>
-                    <li>
-                        <Link to='project' smooth={true} duration={300}><GiGamepadCross size={30} /></Link>
-                    </li>
-                    <li>
-                        <Link to='contact' smooth={true} duration={300}><HiOutlineMailOpen size={30} /></Link>
-                    </li>
-                </ul>
-            </div>
-        </div>
